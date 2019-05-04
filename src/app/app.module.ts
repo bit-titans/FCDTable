@@ -5,11 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {FCDtableComponent} from './components/fcdtable/fcdtable.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { MenuComponent } from './components/menu/menu.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { DataService } from './services/data.service';
 @NgModule({
   declarations: [
     AppComponent,
     FCDtableComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,8 +22,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatPaginatorModule,
     MatSelectModule,
     MatInputModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
