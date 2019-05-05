@@ -27,6 +27,11 @@ export class FCDtableComponent implements OnInit {
     this.data.currentMessage.subscribe(message => {this.serviceUrl = message; console.log(this.serviceUrl);   this.getStudent().subscribe((students: Student[]) => {
       this.dataSource = new MatTableDataSource(students);
       this.dataSource.paginator = this.paginator;
+      this.fcdn = 0;
+      this.scn = 0;
+      this.fcn = 0;
+      this.pn = 0;
+      this.fn = 0;
       students.forEach(i => {
         if (i.FCD === 'FCD') {
           this.fcdn += 1;
