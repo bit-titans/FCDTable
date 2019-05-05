@@ -2,7 +2,7 @@
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
-  <mat-table [dataSource]="dataSource">
+  <mat-table [dataSource]="dataSource" id="exportable">
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
       <mat-cell *matCellDef="let stud"> {{stud.name}} </mat-cell>

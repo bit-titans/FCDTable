@@ -11,7 +11,6 @@ export class MenuComponent implements OnInit {
   subcode = new FormControl('');
   batch = new FormControl('');
   gen: string;
-  obj;
   send() {
     this.gen = 'http://127.0.0.1:8000/getfcd/?sc=' + this.subcode.value + '&batch=' + this.batch.value;
     this.data.changeMessage(this.gen);

@@ -8,11 +8,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MenuComponent } from './components/menu/menu.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DataService } from './services/data.service';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { GraphComponent } from './components/graph/graph.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FCDtableComponent,
     MenuComponent,
+    GraphComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,8 @@ import { DataService } from './services/data.service';
     MatPaginatorModule,
     MatSelectModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
