@@ -8,11 +8,11 @@ import {DataService} from '../../services/data.service';
 })
 export class GraphComponent implements OnInit {
   seriesData: number[];
-  public categories: string[] = ['FCD', 'FC', 'SC', 'P'];
+  public categories: string[] = ['FCD', 'FC', 'SC', 'P', 'F'];
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.currentMessage.subscribe(message => { this.seriesData = message.split(',').map(Number); console.log(this.seriesData) });
+    this.data.currentMessage.subscribe(message => { this.seriesData = message.split(',').map(Number); });
   }
 
 }
