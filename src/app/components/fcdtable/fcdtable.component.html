@@ -2,6 +2,7 @@
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
+  <mat-paginator [pageSizeOptions]="[10, 5, 20]" showFirstLastButtons></mat-paginator>
   <mat-table [dataSource]="dataSource" id="exportable">
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
@@ -23,12 +24,12 @@
       <mat-header-cell *matHeaderCellDef> Total Marks </mat-header-cell>
       <mat-cell *matCellDef="let stud"> {{stud.totalmarks}} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="fcd">
-      <mat-header-cell *matHeaderCellDef> FCD </mat-header-cell>
-      <mat-cell *matCellDef="let stud"> {{stud.FCD}} </mat-cell>
+    <ng-container matColumnDef="gpa">
+      <mat-header-cell *matHeaderCellDef> GPA </mat-header-cell>
+      <mat-cell *matCellDef="let stud"> {{stud.gpa}} </mat-cell>
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-  <mat-paginator [pageSizeOptions]="[10, 5, 20]" showFirstLastButtons></mat-paginator>
+  
 </div>

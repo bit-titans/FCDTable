@@ -5,4 +5,5 @@ export interface Student {
   extmarks: number;
   totalmarks: number;
   FCD: string;
+  gpa: number;
 }

@@ -19,7 +19,7 @@ export class FCDtableComponent implements OnInit {
   sendstr;
   private serviceUrl = '';
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['name', 'usn', 'intmarks', 'extmarks', 'totalmarks', 'fcd'];
+  displayedColumns = ['name', 'usn', 'intmarks', 'extmarks', 'totalmarks', 'gpa'];
   constructor(private http: HttpClient, private data: DataService) { }
 
   ngOnInit() {
